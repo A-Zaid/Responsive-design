@@ -5,10 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Recipes">
+    <meta property="og:description" content="Recipes">
+    <meta property="twitter:description" content="Recipes">
     <script src="https://kit.fontawesome.com/ad7474103a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/index.css">
-    <title>Document</title>
+    <title>Recipes</title>
+    <script>
+        function burgerMenu() {
+            let burger = document.getElementById("nav-bar");
+            if (burger.className === "nav") {
+                burger.className += " responsive";
+            } else {
+                burger.className = "nav";
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -19,24 +32,25 @@
                     <h3 class="logo">
                         Head.
                     </h3>
-                    <nav class="nav">
-                        <ul id="navlist" class="nav__list">
-                            <li><a class="nav__link" href="#">Work</a></li>
-                            <li><a class="nav__link" href="#">Services</a></li>
-                            <li><a class="nav__link" href="#">Contact</a></li>
-                        </ul>
-                        <i id="dotmenu"  class="fas fa-ellipsis-h"></i>
+                    <nav class="nav" id="nav-bar">
+                        <a class="icon" onclick="burgerMenu()">
+                            <i id="dotmenu" class="fas fa-ellipsis-h"></i>
+                        </a>
+                        <a href="#" hidden ></a>
+                        <a href="#">Work</a>
+                        <a href="#">Services</a>
+                        <a href="#">Contact</a>
                     </nav>
                 </div>
             </header>
             <main>
                 <div class="layout__main">
-                    <h2>Recipes</h2>
+                    <h1>Recipes</h1>
                     <br><br>
                     <p>Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus,
                         vitae
                         ullamcor.</p>
-                        <br>
+                    <br>
                 </div>
             </main>
         </div>
